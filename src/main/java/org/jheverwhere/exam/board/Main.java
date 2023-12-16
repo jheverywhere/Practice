@@ -24,7 +24,7 @@ public class Main {
         article.id = id;
         article.title = title;
         article.body = body;
-        System.out.println("생성 된 게시물 객체"+article);
+        System.out.println("생성 된 게시물"+article);
         System.out.printf("%d번 게시물이 등록되었습니다. \n", article.id);
         id++;
       } else if (cmd.equals("exit")) {
@@ -46,5 +46,8 @@ class Article{
   String title;
   String body;
 
-
+  @Override
+  public String toString() {
+    return String.format("번호 : %d\n제목 : \"%s\"\n내용 : \"%s\"\n",id ,title,body);
+  }
 }
